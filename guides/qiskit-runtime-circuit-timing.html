@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.8ef14cb3.css">
-<script src="/assets/js/runtime~main.ebc5eee2.js" defer="defer"></script>
-<script src="/assets/js/main.7d42ab2c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.dfef7113.js" defer="defer"></script>
+<script src="/assets/js/main.e464e52a.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-runtime-circuit-timing" /></head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -46,11 +46,11 @@
 <p><code>[&quot;compilation&quot;][&quot;scheduler_timing&quot;][&quot;timing&quot;]</code>에서 반환된 타이밍 데이터는 문자열 목록입니다. 각 문자열은 일부 채널에서의 단일 명령을 나타내며 다음 데이터 유형으로 쉼표로 구분됩니다:</p>
 <ul>
 <li class=""><code>Branch</code> - 명령이 제어 흐름(then / else) 또는 메인 브랜치에 있는지 여부를 결정합니다.</li>
-<li class=""><code>Instruction</code> - 게이트와 작동할 Qubit.</li>
+<li class=""><code>Instruction</code> - 게이트와 작동할 qubit.</li>
 <li class=""><code>Channel</code> - 명령이 할당되는 채널. 다음 중 하나일 수 있습니다:<!-- -->
 <ul>
-<li class=""><code>Qubit x</code> - Qubit _x_의 드라이브 채널.</li>
-<li class=""><code>AWGRx_y</code> (임의 파형 생성기 읽기) - Qubit을 측정할 때 통신하기 위해 읽기 채널에서 사용됩니다. <em>x</em> 및 <em>y</em> 인수는 각각 읽기 기기 ID와 Qubit 번호에 해당합니다.</li>
+<li class=""><code>qubit x</code> - Qubit _x_의 드라이브 채널.</li>
+<li class=""><code>AWGRx_y</code> (임의 파형 생성기 읽기) - Qubit을 측정할 때 통신하기 위해 읽기 채널에서 사용됩니다. <em>x</em> 및 <em>y</em> 인수는 각각 읽기 기기 ID와 qubit 번호에 해당합니다.</li>
 </ul>
 </li>
 <li class=""><code>T0</code> - 완전한 스케줄 내에서 명령 시작 시간</li>
@@ -71,13 +71,13 @@
 <li class="">Y 축은 채널입니다(채널을 펄스를 방출하는 기기로 생각하세요).<!-- -->
 <ul>
 <li class=""><code>Receive channel</code> - 기기 자체가 아닌 유일한 채널. 해당 시간에 허브와의 통신 절차에 참여하는 모든 채널에서 재생되는 명령입니다.</li>
-<li class=""><code>Qubit x</code> - Qubit x의 드라이브 채널.</li>
-<li class=""><code>AWGRx_y</code> (임의 파형 생성기 읽기) - Qubit을 측정할 때 통신하기 위해 읽기 채널에서 사용됩니다. <em>x</em> 및 <em>y</em> 인수는 각각 읽기 기기 ID와 Qubit 번호에 해당합니다.</li>
+<li class=""><code>qubit x</code> - Qubit x의 드라이브 채널.</li>
+<li class=""><code>AWGRx_y</code> (임의 파형 생성기 읽기) - Qubit을 측정할 때 통신하기 위해 읽기 채널에서 사용됩니다. <em>x</em> 및 <em>y</em> 인수는 각각 읽기 기기 ID와 qubit 번호에 해당합니다.</li>
 <li class=""><code>Hub</code> - 브로드캐스팅을 제어합니다.</li>
 </ul>
 </li>
 </ul>
-<p>또한 각 명령은 <em>X_Y</em> 형식을 가지며, <em>X</em>는 명령의 이름이고 <em>Y</em>는 펄스 유형입니다. <code>play</code> 유형은 제어 펄스를 적용하고, <code>capture</code>는 Qubit의 상태를 기록합니다. 각 명령 위에 마우스를 올려 더 자세한 내용을 볼 수도 있습니다. 예를 들어, 이전 그림은 1161 dt에서 Qubit 10에 적용된 X 게이트에 대한 제어 펄스를 보여줍니다.</p>
+<p>또한 각 명령은 <em>X_Y</em> 형식을 가지며, <em>X</em>는 명령의 이름이고 <em>Y</em>는 펄스 유형입니다. <code>play</code> 유형은 제어 펄스를 적용하고, <code>capture</code>는 Qubit의 상태를 기록합니다. 각 명령 위에 마우스를 올려 더 자세한 내용을 볼 수도 있습니다. 예를 들어, 이전 그림은 1161 dt에서 qubit 10에 적용된 X 게이트에 대한 제어 펄스를 보여줍니다.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="end-to-end-example">전체 예제<a href="#end-to-end-example" class="hash-link" aria-label="전체 예제로 직접 링크" title="전체 예제로 직접 링크" translate="no">​</a></h3>
 <p>이 예제는 옵션을 활성화하고, 메타데이터에서 Circuit 타이밍 정보를 가져와 이미지로 표시하는 방법을 보여줍니다.</p>
 <p>먼저 환경을 설정하고, Circuit을 정의하여 ISA Circuit으로 변환하고, Job을 정의하고 실행합니다.</p>
