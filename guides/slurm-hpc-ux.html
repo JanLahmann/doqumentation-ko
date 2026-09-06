@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.8a478a60.js" defer="defer"></script>
-<script src="/assets/js/main.c47ae6d1.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.aa085067.js" defer="defer"></script>
+<script src="/assets/js/main.ebef61bb.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/slurm-hpc-ux" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -55,37 +55,61 @@
 <p>Quantum System API Backend 구성(HPC 관리자 범위)에는 Quantum System 엔드포인트 및 인증 서비스, S3 엔드포인트에 대한 엔드포인트와 자격 증명이 포함됩니다.
 구체적으로 다음이 포함됩니다:</p>
 <ul>
-<li class="">베어러 토큰 생성을 위한 IBM Cloud® API 키</li>
-<li class="">Quantum System API 엔드포인트</li>
-<li class="">S3 버킷 및 접근 세부 정보</li>
+<li class="">
+<p>베어러 토큰 생성을 위한 IBM Cloud® API 키</p>
+</li>
+<li class="">
+<p>Quantum System API 엔드포인트</p>
+</li>
+<li class="">
+<p>S3 버킷 및 접근 세부 정보</p>
+</li>
 </ul>
 <p>접근 자격 증명은 HPC 사용자나 시스템의 다른 비권한 사용자에게 노출되어서는 안 됩니다.
 따라서 민감한 데이터는 별도의 파일에 저장하고 적절히 접근 보호를 설정할 수 있습니다.</p>
 <p>Slurm은 Backend에 대한 전체 접근 권한을 갖는다는 점에 유의하세요.
 이에 따라 다음과 같은 몇 가지 의미가 있습니다:</p>
 <ul>
-<li class="">Slurm 플러그인은 멀티테넌시를 담당합니다(사용자가 다른 사용자의 작업 결과를 볼 수 없도록 보장).</li>
-<li class="">HPC 클러스터 측은 사용자 검증(QPU 접근이 허용된 사용자)과 적절한 접근 보장을 담당합니다.</li>
-<li class="">QPU 사용의 용량과 우선순위는 전적으로 Slurm을 통해 관리되며, Slurm 외부의 다른 사용자 스케줄링은 관여하지 않습니다.</li>
+<li class="">
+<p>Slurm 플러그인은 멀티테넌시를 담당합니다(사용자가 다른 사용자의 작업 결과를 볼 수 없도록 보장).</p>
+</li>
+<li class="">
+<p>HPC 클러스터 측은 사용자 검증(QPU 접근이 허용된 사용자)과 적절한 접근 보장을 담당합니다.</p>
+</li>
+<li class="">
+<p>QPU 사용의 용량과 우선순위는 전적으로 Slurm을 통해 관리되며, Slurm 외부의 다른 사용자 스케줄링은 관여하지 않습니다.</p>
+</li>
 </ul>
 <h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-scope-1">사용자 범위<a href="#user-scope-1" class="hash-link" aria-label="사용자 범위로 직접 링크" title="사용자 범위로 직접 링크" translate="no">​</a></h5>
 <p>실행 레인은 HPC 관리자나 사용자에게 직접 노출되지 않습니다.
 대신, 런타임 중에 HPC 사용자가 지정할 수 있는 두 가지 모드가 있습니다:</p>
 <ul>
-<li class=""><code>exclusive=true</code>는 다른 작업이 동시에 리소스를 사용할 수 없도록 지정합니다. 독점 모드 작업은 모든 실행 레인을 할당받으며 비독점 작업과 동시에 실행될 수 없습니다.</li>
-<li class=""><code>exclusive=false</code>는 다른 작업이 병렬로 실행될 수 있도록 허용합니다. 이 경우 실행 레인 수만큼의 작업이 동시에 실행될 수 있으며, 해당 작업에는 하나의 레인이 할당됩니다.</li>
+<li class="">
+<p><code>exclusive=true</code>는 다른 작업이 동시에 리소스를 사용할 수 없도록 지정합니다. 독점 모드 작업은 모든 실행 레인을 할당받으며 비독점 작업과 동시에 실행될 수 없습니다.</p>
+</li>
+<li class="">
+<p><code>exclusive=false</code>는 다른 작업이 병렬로 실행될 수 있도록 허용합니다. 이 경우 실행 레인 수만큼의 작업이 동시에 실행될 수 있으며, 해당 작업에는 하나의 레인이 할당됩니다.</p>
+</li>
 </ul>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="qiskit-runtime-service">Qiskit Runtime Service<a href="#qiskit-runtime-service" class="hash-link" aria-label="Qiskit Runtime Service로 직접 링크" title="Qiskit Runtime Service로 직접 링크" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="ibm-quantum-compute-service">IBM Quantum Compute Service<a href="#ibm-quantum-compute-service" class="hash-link" aria-label="IBM Quantum Compute Service로 직접 링크" title="IBM Quantum Compute Service로 직접 링크" translate="no">​</a></h4>
 <h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-scope-2">사용자 범위<a href="#user-scope-2" class="hash-link" aria-label="사용자 범위로 직접 링크" title="사용자 범위로 직접 링크" translate="no">​</a></h5>
 <p>사용자는 환경 변수에 추가 접근 세부 정보를 지정해야 합니다.
 구체적으로 다음이 포함됩니다:</p>
 <ul>
-<li class="">Qiskit Runtime 서비스 인스턴스(CRN, Cloud Resource Name)</li>
-<li class="">Qiskit Runtime 엔드포인트(CRN에서 자동 감지되지 않는 경우)</li>
-<li class="">CRN 접근 권한이 있는 API 키</li>
-<li class="">데이터 전송을 위한 S3 인스턴스, 버킷, 접근 토큰/자격 증명</li>
+<li class="">
+<p>IBM Quantum Compute Service 인스턴스(CRN, Cloud Resource Name)</p>
+</li>
+<li class="">
+<p>Quantum Compute 엔드포인트(CRN에서 자동 감지되지 않는 경우)</p>
+</li>
+<li class="">
+<p>CRN 접근 권한이 있는 API 키</p>
+</li>
+<li class="">
+<p>데이터 전송을 위한 S3 인스턴스, 버킷, 접근 토큰/자격 증명</p>
+</li>
 </ul>
-<p>이러한 세부 정보는 Qiskit Runtime 서비스가 어떤 사용자 및 서비스 인스턴스 하에서 사용되는지를 결정합니다.
+<p>이러한 세부 정보는 IBM Quantum Compute Service가 어떤 사용자 및 서비스 인스턴스 하에서 사용되는지를 결정합니다.
 따라서 IBM Quantum® Platform 스케줄링은 스케줄링 시 사용자 및 서비스 인스턴스의 기능을 고려합니다.</p>
 <p>현재 사용자는 위의 세부 정보를 직접 제공해야 합니다(클러스터 전체 공유 양자 접근 불가).</p>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="pasqal-cloud-services">Pasqal Cloud Services<a href="#pasqal-cloud-services" class="hash-link" aria-label="Pasqal Cloud Services로 직접 링크" title="Pasqal Cloud Services로 직접 링크" translate="no">​</a></h4>
@@ -95,8 +119,12 @@
 <p>사용자는 환경 변수에 추가 접근 세부 정보를 지정해야 합니다.
 현재 다음이 포함됩니다:</p>
 <ul>
-<li class="">대상 PCS 리소스(FRESNEL, EMU_FRESNEL, EMU_MPS)</li>
-<li class="">인증 토큰</li>
+<li class="">
+<p>대상 PCS 리소스(FRESNEL, EMU_FRESNEL, EMU_MPS)</p>
+</li>
+<li class="">
+<p>인증 토큰</p>
+</li>
 </ul></div><div class="dq-footer-block"><div class="dq-page-dates"><div class="dq-page-dates__row">출처: <a href="https://docs.quantum.ibm.com/guides/slurm-hpc-ux" target="_blank" rel="noopener noreferrer" class="dq-page-dates__link">IBM Quantum docs</a> — <span class="dq-page-dates__date">2026년 8월 6일</span> 업데이트</div><div class="dq-page-dates__row">doQumentation의 <a href="https://doqumentation.org/guides/slurm-hpc-ux" class="dq-page-dates__link">영어 버전</a> — <span class="dq-page-dates__date">2026년 8월 6일</span> 업데이트</div><div class="dq-page-dates__row dq-page-dates__row--translation">이 번역은 <span class="dq-page-dates__date">2026년 3월 11일</span>의 영어 버전을 기반으로 합니다</div></div><div class="dq-footer-actions"><div class="dq-footer-actions__left"><button class="dq-bookmark-button" title="이 페이지 북마크" aria-label="이 페이지 북마크"><span class="dq-bookmark-button__icon" aria-hidden="true">☆</span>북마크</button></div><div class="dq-footer-actions__right"><div class="dq-feedback-actions"><a href="https://github.com/JanLahmann/doQumentation/issues/new" target="_blank" rel="noopener noreferrer" class="dq-site-issue-link" title="doQumentation의 사이트, 번역 또는 코드 실행 문제 보고">사이트 또는 번역 문제?</a><a href="https://github.com/Qiskit/documentation/edit/main/docs/guides/slurm-hpc-ux.mdx" target="_blank" rel="noopener noreferrer" class="dq-content-edit-link" title="콘텐츠의 오타 또는 기술적 오류? IBM이 출처입니다 — 클릭하면 IBM Quantum docs GitHub 저장소에서 열립니다.">콘텐츠 문제? IBM Quantum docs에서 편집</a></div></div></div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="문서 페이지"><a class="pagination-nav__link pagination-nav__link--prev" href="/guides/slurm-plugin"><div class="pagination-nav__sublabel">이전</div><div class="pagination-nav__label">QRMI용 SPANK 플러그인</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/guides/qiskit-mcp-servers"><div class="pagination-nav__sublabel">다음</div><div class="pagination-nav__label">Qiskit MCP 서버</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#configure-qpu-resources-in-job-creation" class="table-of-contents__link toc-highlight">작업 생성 시 QPU 리소스 구성</a><ul><li><a href="#administrator-scope" class="table-of-contents__link toc-highlight">관리자 범위</a></li><li><a href="#user-scope" class="table-of-contents__link toc-highlight">사용자 범위</a></li><li><a href="#hpc-application-scope" class="table-of-contents__link toc-highlight">HPC 애플리케이션 범위</a></li><li><a href="#backend-specifics" class="table-of-contents__link toc-highlight">Backend 세부 사항</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">doQumentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/features">기능</a></li><li class="footer__item"><a class="footer__link-item" href="/jupyter-settings">Settings</a></li><li class="footer__item"><a href="https://github.com/JanLahmann/doQumentation" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/legal">Legal / Impressum</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">RasQberry</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://rasqberry.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">RasQberry<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/JanLahmann/RasQberry-Two" target="_blank" rel="noopener noreferrer" class="footer__link-item">RasQberry GitHub<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">IBM Quantum &amp; Qiskit</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://quantum.cloud.ibm.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">IBM Quantum Platform<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://ibm.com/quantum" target="_blank" rel="noopener noreferrer" class="footer__link-item">IBM Quantum<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://quantum.cloud.ibm.com/docs/en/guides" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qiskit 문서<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/Qiskit/documentation" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qiskit Docs GitHub<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://qisk.it/join-slack" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qiskit Slack<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Fun with Quantum family</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://fun-with-quantum.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Fun with Quantum<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://rasqberry.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">RasQberry Two<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://rasqberry.one" target="_blank" rel="noopener noreferrer" class="footer__link-item">RasQberry One<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://quantego.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Quantego<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://qutie.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qutie<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://qoffee-maker.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qoffee-Maker<svg width="13.5" height="13.5" aria-label="(새 탭에서 열기)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright"><a href="https://github.com/Qiskit/documentation">Qiskit 문서</a> 콘텐츠 © IBM Corp. 코드는 Apache 2.0 라이선스; 콘텐츠(튜토리얼, 강좌, 미디어)는 CC BY-SA 4.0 라이선스.<br>IBM, IBM Quantum, Qiskit은 IBM Corporation의 상표입니다.<br>doQumentation은 <a href="https://rasqberry.org/">RasQberry</a> 프로젝트의 일부이며 IBM Corporation과 제휴 관계에 있지 않으며, IBM의 승인이나 후원을 받지 않습니다.</div></div></div></footer></div>
 </body>
 </html>

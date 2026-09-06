@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.8a478a60.js" defer="defer"></script>
-<script src="/assets/js/main.c47ae6d1.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.aa085067.js" defer="defer"></script>
+<script src="/assets/js/main.ebef61bb.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/qiskit-addons/cutting/wire_cutting_via_move_instruction" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,25 +28,31 @@
 <p>이 튜토리얼에서는 와이어 커팅을 사용하여 7큐비트 회로를 두 개의 4큐비트 회로로 분할함으로써 기댓값을 재구성합니다.</p>
 <p>다음은 이 <a href="https://quantum.cloud.ibm.com/docs/guides/intro-to-patterns" target="_blank" rel="noopener noreferrer" class="">Qiskit 패턴</a>에서 진행할 단계들입니다.</p>
 <ul>
-<li class=""><strong>1단계: 문제를 양자 회로와 연산자로 매핑</strong>:<!-- -->
+<li class="">
+<p><strong>1단계: 문제를 양자 회로와 연산자로 매핑</strong>:</p>
 <ul>
 <li class="">해밀토니안을 양자 회로에 매핑합니다.</li>
 </ul>
 </li>
-<li class=""><strong>2단계: 타겟 하드웨어에 맞게 최적화</strong> [<em>커팅 애드온 사용</em>]:<!-- -->
+<li class="">
+<p><strong>2단계: 타겟 하드웨어에 맞게 최적화</strong> [<em>커팅 애드온 사용</em>]:</p>
 <ul>
 <li class="">
 <font color="#0F62FE">회로와 관측가능량을 커팅합니다.</font>
 </li>
-<li class="">하드웨어에 맞게 서브실험을 트랜스파일합니다.</li>
+<li class="">
+<p>하드웨어에 맞게 서브실험을 트랜스파일합니다.</p>
+</li>
 </ul>
 </li>
-<li class=""><strong>3단계: 타겟 하드웨어에서 실행</strong>:<!-- -->
+<li class="">
+<p><strong>3단계: 타겟 하드웨어에서 실행</strong>:</p>
 <ul>
 <li class="">2단계에서 얻은 서브실험을 <code>Sampler</code> 프리미티브를 사용하여 실행합니다.</li>
 </ul>
 </li>
-<li class=""><strong>4단계: 결과 후처리</strong> [<em>커팅 애드온 사용</em>]:<!-- -->
+<li class="">
+<p><strong>4단계: 결과 후처리</strong> [<em>커팅 애드온 사용</em>]:</p>
 <ul>
 <li class="">
 <font color="#0F62FE">3단계의 결과를 결합하여 대상 관측가능량의 기댓값을 재구성합니다.</font>
