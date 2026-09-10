@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.6834b18f.js" defer="defer"></script>
-<script src="/assets/js/main.abc2447b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.92e8205a.js" defer="defer"></script>
+<script src="/assets/js/main.f7302cfe.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/shors-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/shors-algorithm" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,19 +29,19 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">학습 목표<a href="#learning-outcomes" class="hash-link" aria-label="학습 목표로 직접 링크" title="학습 목표로 직접 링크" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>The mathematical background of Shor&#x27;s algorithm for integer factorization</p>
+<p>정수 인수분해를 위한 쇼어 알고리즘의 수학적 배경</p>
 </li>
 <li class="">
-<p>How to run an example instance of this algorithm on hardware</p>
+<p>실제 하드웨어에서 이 알고리즘의 예시를 실행하는 방법</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">사전 요구 사항<a href="#prerequisites" class="hash-link" aria-label="사전 요구 사항로 직접 링크" title="사전 요구 사항로 직접 링크" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p><a class="" href="/learning/courses/fundamentals-of-quantum-algorithms">Fundamentals of quantum algorithms</a>.</p>
+<p><a class="" href="/learning/courses/fundamentals-of-quantum-algorithms">양자 알고리즘의 기초</a>.</p>
 </li>
 <li class="">
-<p><a class="" href="/learning/courses/fundamentals-of-quantum-algorithms/phase-estimation-and-factoring/introduction">Phase estimation and factoring</a>. We cover some of this material in this tutorial.</p>
+<p><a class="" href="/learning/courses/fundamentals-of-quantum-algorithms/phase-estimation-and-factoring/introduction">위상 추정과 소인수분해</a>. 이 튜토리얼에서는 이 내용의 일부를 다룹니다.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">배경<a href="#background" class="hash-link" aria-label="배경로 직접 링크" title="배경로 직접 링크" translate="no">​</a></h2>

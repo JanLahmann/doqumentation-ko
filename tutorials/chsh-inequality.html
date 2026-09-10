@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.6834b18f.js" defer="defer"></script>
-<script src="/assets/js/main.abc2447b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.92e8205a.js" defer="defer"></script>
+<script src="/assets/js/main.f7302cfe.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/chsh-inequality" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,25 +29,25 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">학습 성과<a href="#learning-outcomes" class="hash-link" aria-label="학습 성과로 직접 링크" title="학습 성과로 직접 링크" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>How to construct a parameterized Bell-state CHSH circuit and measure the four expectation values that make up the CHSH witnesses.</p>
+<p>매개변수화된 Bell 상태 CHSH Circuit을 구성하고, CHSH 증인(witness)을 구성하는 네 가지 기댓값을 측정하는 방법.</p>
 </li>
 <li class="">
-<p>How to compute expectation values of multiple observables on a parameter sweep in a single call to the <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/estimator-v2" target="_blank" rel="noopener noreferrer" class=""><code>EstimatorV2</code></a> primitive.</p>
+<p><a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/estimator-v2" target="_blank" rel="noopener noreferrer" class=""><code>EstimatorV2</code></a> 프리미티브를 한 번 호출하여 매개변수 스윕에서 여러 관측량의 기댓값을 계산하는 방법.</p>
 </li>
 <li class="">
-<p>How to validate a quantum workflow on a noisy local simulator with <code>AerSimulator.from_backend</code> before submitting to hardware.</p>
+<p>하드웨어에 제출하기 전에 <code>AerSimulator.from_backend</code>를 사용하여 잡음이 있는 로컬 시뮬레이터에서 양자 워크플로를 검증하는 방법.</p>
 </li>
 <li class="">
-<p>How to scale a CHSH experiment into a device-wide entanglement benchmark by running many independent Bell pairs in parallel on IBM Quantum® hardware.</p>
+<p>IBM Quantum® 하드웨어에서 많은 독립적인 Bell 쌍을 병렬로 실행하여 CHSH 실험을 디바이스 전체 얽힘 벤치마크로 확장하는 방법.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">사전 조건<a href="#prerequisites" class="hash-link" aria-label="사전 조건로 직접 링크" title="사전 조건로 직접 링크" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p><a class="" href="/learning/courses/basics-of-quantum-information/entanglement-in-action/chsh-game">Entanglement in action</a>, a course lesson on Bell states and the CHSH game.</p>
+<p><a class="" href="/learning/courses/basics-of-quantum-information/entanglement-in-action/chsh-game">행동 속의 얽힘</a>: Bell 상태와 CHSH 게임에 관한 강좌 레슨.</p>
 </li>
 <li class="">
-<p><a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.quantum_info.SparsePauliOp" target="_blank" rel="noopener noreferrer" class=""><code>SparsePauliOp</code></a> and the Qiskit primitives <a class="" href="/guides/primitives">introduction</a>.</p>
+<p><a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.quantum_info.SparsePauliOp" target="_blank" rel="noopener noreferrer" class=""><code>SparsePauliOp</code></a> 및 Qiskit 프리미티브 <a class="" href="/guides/primitives">소개</a>.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">배경<a href="#background" class="hash-link" aria-label="배경로 직접 링크" title="배경로 직접 링크" translate="no">​</a></h2>

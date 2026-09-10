@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.6834b18f.js" defer="defer"></script>
-<script src="/assets/js/main.abc2447b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.92e8205a.js" defer="defer"></script>
+<script src="/assets/js/main.f7302cfe.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/sample-based-quantum-diagonalization" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/sample-based-quantum-diagonalization" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,19 +29,19 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">학습 성과<a href="#learning-outcomes" class="hash-link" aria-label="학습 성과로 직접 링크" title="학습 성과로 직접 링크" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>How to use the <a href="https://docs.quantum.ibm.com/addons/qiskit-addon-sqd" target="_blank" rel="noopener noreferrer" class="">SQD Qiskit addon</a> to approximate the ground state energy of a molecular system using bitstrings sampled from a quantum processing unit (QPU).</p>
+<p><a href="https://docs.quantum.ibm.com/addons/qiskit-addon-sqd" target="_blank" rel="noopener noreferrer" class="">SQD Qiskit 애드온</a>을 사용하여 양자 처리 장치(QPU)에서 샘플링된 비트스트링으로 분자 시스템의 기저 상태 에너지를 근사하는 방법.</p>
 </li>
 <li class="">
-<p>How to use <a href="https://github.com/qiskit-community/ffsim" target="_blank" rel="noopener noreferrer" class="">ffsim</a> to construct a local unitary cluster Jastrow (LUCJ) circuit for quantum chemistry simulation.</p>
+<p><a href="https://github.com/qiskit-community/ffsim" target="_blank" rel="noopener noreferrer" class="">ffsim</a>을 사용하여 양자 화학 시뮬레이션을 위한 국소 유니터리 클러스터 야스트로프(LUCJ) Circuit을 구성하는 방법.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">사전 요구 사항<a href="#prerequisites" class="hash-link" aria-label="사전 요구 사항로 직접 링크" title="사전 요구 사항로 직접 링크" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>Quantum chemistry and second quantization</p>
+<p>양자 화학과 이차 양자화</p>
 </li>
 <li class="">
-<p>Using the Sampler primitive to sample from quantum circuits</p>
+<p>Sampler 프리미티브를 사용하여 양자 Circuit에서 샘플링하기</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">배경<a href="#background" class="hash-link" aria-label="배경로 직접 링크" title="배경로 직접 링크" translate="no">​</a></h2>

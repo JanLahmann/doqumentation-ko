@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.6834b18f.js" defer="defer"></script>
-<script src="/assets/js/main.abc2447b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.92e8205a.js" defer="defer"></script>
+<script src="/assets/js/main.f7302cfe.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/operator-back-propagation" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/operator-back-propagation" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,15 +29,15 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">학습 목표<a href="#learning-outcomes" class="hash-link" aria-label="학습 목표로 직접 링크" title="학습 목표로 직접 링크" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>How to use <a href="https://github.com/Qiskit/qiskit-addon-obp" target="_blank" rel="noopener noreferrer" class=""><code>qiskit-addon-obp</code></a> to reduce the depth of the quantum circuit at the cost of an increased number of circuit executions</p>
+<p><a href="https://github.com/Qiskit/qiskit-addon-obp" target="_blank" rel="noopener noreferrer" class=""><code>qiskit-addon-obp</code></a>를 사용하여 회로 실행 횟수 증가를 감수하면서 양자 회로의 깊이를 줄이는 방법</p>
 </li>
 <li class="">
-<p>How to use <a href="https://github.com/Qiskit/qiskit-addon-utils" target="_blank" rel="noopener noreferrer" class=""><code>qiskit-addon-utils</code></a> to construct XYZ Hamiltonians and their time-evolution circuits</p>
+<p><a href="https://github.com/Qiskit/qiskit-addon-utils" target="_blank" rel="noopener noreferrer" class=""><code>qiskit-addon-utils</code></a>를 사용하여 XYZ 해밀토니안과 그 시간 진화 회로를 구성하는 방법</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">사전 요구 사항<a href="#prerequisites" class="hash-link" aria-label="사전 요구 사항로 직접 링크" title="사전 요구 사항로 직접 링크" translate="no">​</a></h2>
 <ul>
-<li class="">Using the <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/estimator-v2" target="_blank" rel="noopener noreferrer" class="">Estimator</a> primitive to calculate expectation values of an observable</li>
+<li class="">관측 가능량의 기댓값을 계산하기 위한 <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/estimator-v2" target="_blank" rel="noopener noreferrer" class="">Estimator</a> 프리미티브 사용법</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">배경<a href="#background" class="hash-link" aria-label="배경로 직접 링크" title="배경로 직접 링크" translate="no">​</a></h2>
 <p>연산자 역전파(Operator backpropagation)는 양자 회로의 끝에서 연산을 측정 대상 관측 가능량(observable)에 흡수하는 기법으로, 일반적으로 관측 가능량의 항이 늘어나는 대신 회로의 깊이를 줄일 수 있습니다. 목표는 관측 가능량이 지나치게 커지지 않는 범위에서 최대한 많은 회로를 역전파하는 것입니다. Qiskit 기반 구현은 OBP Qiskit 애드온에서 제공됩니다. 자세한 내용은 해당 <a href="https://qiskit.github.io/qiskit-addon-obp/" target="_blank" rel="noopener noreferrer" class="">문서</a>를 참고하세요.</p>
