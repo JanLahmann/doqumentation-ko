@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.bee6a413.js" defer="defer"></script>
-<script src="/assets/js/main.a7e699e4.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e00b00e4.js" defer="defer"></script>
+<script src="/assets/js/main.deda1826.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -73,11 +73,11 @@
 </ul>
 <p><strong>비변분적 설계</strong>: 약 100번의 반복이 필요한 변분 알고리즘과 달리, bf-DCQO는 일반적으로 <strong>약 10번의 반복</strong>만 필요합니다 <a href="#references" class="">[1]</a>. 이는 다음을 통해 달성됩니다:</p>
 <ul>
-<li class="">측정된 상태 분포로부터의 지능적인 편향장 계산</li>
+<li class="">측정된 상태 분포로부터의 지능적인 편향 필드 계산</li>
 <li class="">이전 해에 가까운 에너지 상태에서 각 반복 시작</li>
 <li class="">로컬 탐색을 포함한 통합 고전적 후처리</li>
 </ul>
-<p><strong>반단열적 프로토콜</strong>: 알고리즘은 짧은 진화 시간 동안 원치 않는 양자 여기를 억제하는 반단열적 항을 포함하여, 빠른 전이에서도 시스템이 기저 상태 근처에 머물 수 있도록 합니다 <a href="#references" class="">[1]</a>.</p>
+<p><strong>반단열적 프로토콜</strong>: 알고리즘은 짧은 진화 시간 동안 원치 않는 양자 여기를 억제하는 반단열적 항을 포함하여, 빠른 전이에서도 시스템이 바닥 상태 근처에 머물 수 있도록 합니다 <a href="#references" class="">[1]</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements">요구 사항<a href="#requirements" class="hash-link" aria-label="요구 사항로 직접 링크" title="요구 사항로 직접 링크" translate="no">​</a></h2>
 <p>이 튜토리얼을 시작하기 전에 다음이 설치되어 있는지 확인하세요:</p>
 <ul>
@@ -201,7 +201,7 @@
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="load-the-problem-instance">문제 인스턴스 불러오기<a href="#load-the-problem-instance" class="hash-link" aria-label="문제 인스턴스 불러오기로 직접 링크" title="문제 인스턴스 불러오기로 직접 링크" translate="no">​</a></h3>
 <p>이제 QOBLIB [2]에서 특정 문제 인스턴스 <code>ms_03_200_177.dat</code>를 불러옵니다. 이 인스턴스는 다음과 같은 특성을 가집니다:</p>
 <ul>
-<li class="">상품 3개 (제약 조건)</li>
+<li class="">제품 3개 (제약 조건)</li>
 <li class="">시장 20개 (이진 결정 변수)</li>
 <li class="">탐색 가능한 시장 배정 조합 100만 개 이상 (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>20</mn></msup><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mn>048</mn><mo separator="true">,</mo><mn>576</mn></mrow><annotation encoding="application/x-tex">2^{20} = 1,048,576</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">20</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord">048</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord">576</span></span></span></span>)</li>
 </ul>
@@ -357,7 +357,7 @@
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="advanced-options-optional">고급 옵션 (선택 사항)<a href="#advanced-options-optional" class="hash-link" aria-label="고급 옵션 (선택 사항)로 직접 링크" title="고급 옵션 (선택 사항)로 직접 링크" translate="no">​</a></h4>
 <p>Iskay는 선택적 매개변수를 통해 세부 조정 기능을 제공합니다. 대부분의 문제에서는 기본값이 잘 작동하지만, 특정 요구 사항에 맞게 동작을 사용자 지정할 수 있습니다:</p>
 <table><thead><tr><th>매개변수</th><th>유형</th><th>기본값</th><th>설명</th></tr></thead><tbody><tr><td><strong>shots</strong></td><td><code>int</code></td><td>10000</td><td>반복당 양자 측정 횟수 (높을수록 더 정확)</td></tr><tr><td><strong>num_iterations</strong></td><td><code>int</code></td><td>10</td><td>알고리즘 반복 횟수 (반복이 많을수록 해 품질이 향상될 수 있음)</td></tr><tr><td><strong>use_session</strong></td><td><code>bool</code></td><td>True</td><td>대기 시간 단축을 위해 IBM Session 사용</td></tr><tr><td><strong>seed_transpiler</strong></td><td><code>int</code></td><td>None</td><td>재현 가능한 양자 Circuit 컴파일을 위해 설정</td></tr><tr><td><strong>direct_qubit_mapping</strong></td><td><code>bool</code></td><td>False</td><td>가상 Qubit을 물리적 Qubit에 직접 매핑</td></tr><tr><td><strong>job_tags</strong></td><td><code>List[str]</code></td><td>None</td><td>작업 추적을 위한 사용자 정의 태그</td></tr><tr><td><strong>preprocessing_level</strong></td><td><code>int</code></td><td>0</td><td>문제 전처리 강도 (0-3) - 아래 세부 정보 참조</td></tr><tr><td><strong>postprocessing_level</strong></td><td><code>int</code></td><td>2</td><td>해 정제 수준 (0-2) - 아래 세부 정보 참조</td></tr><tr><td><strong>transpilation_level</strong></td><td><code>int</code></td><td>0</td><td>Transpiler 최적화 시도 횟수 (0-5) - 아래 세부 정보 참조</td></tr><tr><td><strong>transpile_only</strong></td><td><code>bool</code></td><td>False</td><td>전체 실행 없이 Circuit 최적화만 분석</td></tr></tbody></table>
-<p><strong>전처리 수준 (0-3)</strong>: 현재 하드웨어의 결어긋남 시간에 맞지 않는 더 큰 문제에 특히 중요합니다. 전처리 수준이 높을수록 문제 트랜스파일레이션의 근사화를 통해 더 얕은 Circuit 깊이를 달성합니다:</p>
+<p><strong>전처리 수준 (0-3)</strong>: 현재 하드웨어의 결맞음 시간 안에 들어가지 않는 더 큰 문제에 특히 중요합니다. 전처리 수준이 높을수록 문제 트랜스파일레이션의 근사화를 통해 더 얕은 Circuit 깊이를 달성합니다:</p>
 <ul>
 <li class=""><strong>레벨 0</strong>: 정확하지만 더 긴 Circuit</li>
 <li class=""><strong>레벨 1</strong>: 정확도와 근사화 간의 좋은 균형으로, 최저 10 백분위수의 각도를 가진 Gate만 제거</li>
@@ -373,7 +373,7 @@
 <li class=""><strong>레벨 4</strong>: <code>PauliEvolutionGate</code> 최적화 후 분해된 DCQO Circuit 최적화 (max_trials=25)</li>
 <li class=""><strong>레벨 5</strong>: <code>PauliEvolutionGate</code> 최적화 후 분해된 DCQO Circuit 최적화 (max_trials=50)</li>
 </ul>
-<p><strong>후처리 수준 (0-2)</strong>: 서로 다른 수의 지역 탐색 탐욕 패스를 통해 비트 플립 오류를 보정하는 고전적 최적화 양을 제어합니다:</p>
+<p><strong>후처리 수준 (0-2)</strong>: 지역 탐색의 탐욕적 패스 횟수를 조절하여 비트 플립 오류를 얼마나 보정할지 결정합니다:</p>
 <ul>
 <li class=""><strong>레벨 0</strong>: 1회 패스</li>
 <li class=""><strong>레벨 1</strong>: 2회 패스</li>

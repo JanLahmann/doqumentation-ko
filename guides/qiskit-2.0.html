@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.bee6a413.js" defer="defer"></script>
-<script src="/assets/js/main.a7e699e4.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e00b00e4.js" defer="defer"></script>
+<script src="/assets/js/main.deda1826.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-2.0" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -41,7 +41,7 @@ v1.0 릴리스와 달리 패키징 구조의 변경은 포함되어 있지 않�
 조건을 테스트하는 가장 올바른 방법은 <code>isinstance</code> 검사를 사용하여 올바른 클래스를 확인하는 것입니다.
 라이브러리가 Qiskit v2.0 이후로 전환하는 동안 레거시 <code>Instruction.condition</code> 속성을 지원하려면, <code>getattr(operation, &quot;condition&quot;, None)</code>을 사용할 수 있습니다. 이는 일반적으로 <code>Instruction</code> 인스턴스가 Qiskit v1.x 및 이전 버전에서와 동일하게 동작하도록 합니다.</p>
 <p>Qiskit에서 단순한 레지스터 동등 조건을 지원하는 원래의 레거시 방법은 개별 명령어 또는 명령어 세트에 <code>c_if</code> 메서드를 사용하는 것이었습니다.
-이 방법은 완전한 제어 흐름 형식보다 기능이 엄격하게 제한되어 있었으며, 하드웨어에서 잘 지원되지 않았습니다.
+이 방법은 완전한 제어 흐름 형식보다 기능이 확실히 더 적었고, 하드웨어에서 제대로 지원된 적도 없었습니다.
 이 레거시 방법은 Qiskit v2.0에서 제거되었습니다. 적절한 조건과 함께 <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.QuantumCircuit#qiskit.circuit.QuantumCircuit.if_test" target="_blank" rel="noopener noreferrer" class=""><code>if_test</code></a> 메서드를 사용해야 합니다.
 레지스터 동등을 표현하기 위해 <code>(register, integer)</code>의 2-튜플 형식을 계속 사용하거나, 더 복잡한 조건을 표현하기 위해 더 표현력 있는 <a href="https://docs.quantum.ibm.com/api/qiskit/circuit_classical" target="_blank" rel="noopener noreferrer" class="">고전적 계산 서브시스템</a>을 사용할 수 있습니다.</p>
 <p>예를 들어, 다음과 같이 작성했을 수 있습니다:</p>
@@ -93,9 +93,8 @@ Transpiler 사용 사례의 수가 <code>target</code> 및 <code>backend</code> 
 </li>
 <li class="">
 <p><code>backend</code>와 함께 <code>coupling_map</code> 및/또는 <code>basis_gates</code>를 제공하는 것은 권장되지 않으며,
-v2.0부터는 <code>UserWarning</code>이 발생합니다. 이러한 경우 여러 진실의 원천이 존재하며,
-게이트 오류 및 지속 시간과 같은 정보는 주어진 정보를 기반으로 백엔드로부터
-해석될 수 없습니다.
+v2.0부터는 <code>UserWarning</code>이 발생합니다. 이러한 경우 정보의 출처가 여러 개가 되어, 백엔드의 게이트 오류나 지속 시간 같은 정보를
+주어진 정보만으로는 확정할 수 없습니다.
 권장되는 대안은 처음부터 또는 <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.Target#from_configuration" target="_blank" rel="noopener noreferrer" class=""><code>Target.from_configuration</code></a> 또는 <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.providers.fake_provider.GenericBackendV2" target="_blank" rel="noopener noreferrer" class=""><code>GenericBackendV2</code></a>를 사용하여 선택한 제약 조건을 결합한 사용자 지정 target을 정의하는 것입니다.</p>
 </li>
 <li class="">
