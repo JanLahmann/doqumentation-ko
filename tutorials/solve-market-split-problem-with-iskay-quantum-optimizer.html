@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.9a5d6fd2.js" defer="defer"></script>
-<script src="/assets/js/main.37177a2a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4e52183b.js" defer="defer"></script>
+<script src="/assets/js/main.e906e1c2.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/solve-market-split-problem-with-iskay-quantum-optimizer" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -75,7 +75,7 @@
 <ul>
 <li class="">측정된 상태 분포로부터의 지능적인 편향 필드 계산</li>
 <li class="">이전 해에 가까운 에너지 상태에서 각 반복 시작</li>
-<li class="">로컬 탐색을 포함한 통합 고전적 후처리</li>
+<li class="">지역 탐색을 포함한 통합 고전적 후처리</li>
 </ul>
 <p><strong>반단열적 프로토콜</strong>: 알고리즘은 짧은 진화 시간 동안 원치 않는 양자 여기를 억제하는 반단열적 항을 포함하여, 빠른 전이에서도 시스템이 바닥 상태 근처에 머물 수 있도록 합니다 <a href="#references" class="">[1]</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements">요구 사항<a href="#requirements" class="hash-link" aria-label="요구 사항로 직접 링크" title="요구 사항로 직접 링크" translate="no">​</a></h2>
@@ -373,7 +373,7 @@
 <li class=""><strong>레벨 4</strong>: <code>PauliEvolutionGate</code> 최적화 후 분해된 DCQO Circuit 최적화 (max_trials=25)</li>
 <li class=""><strong>레벨 5</strong>: <code>PauliEvolutionGate</code> 최적화 후 분해된 DCQO Circuit 최적화 (max_trials=50)</li>
 </ul>
-<p><strong>후처리 수준 (0-2)</strong>: 지역 탐색의 탐욕적 패스 횟수를 조절하여 비트 플립 오류를 얼마나 보정할지 결정합니다:</p>
+<p><strong>후처리 수준 (0-2)</strong>: 지역 탐색의 탐욕적 패스 횟수를 달리하여 고전적 최적화를 얼마나 수행할지 조절하며, 이를 통해 비트 플립 오류를 보정합니다:</p>
 <ul>
 <li class=""><strong>레벨 0</strong>: 1회 패스</li>
 <li class=""><strong>레벨 1</strong>: 2회 패스</li>
