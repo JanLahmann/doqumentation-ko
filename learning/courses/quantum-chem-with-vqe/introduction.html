@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.fa60f6b1.js" defer="defer"></script>
-<script src="/assets/js/main.0ba31274.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e87f3bdc.js" defer="defer"></script>
+<script src="/assets/js/main.ffad712b.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/learning/courses/quantum-chem-with-vqe/introduction" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -35,7 +35,7 @@
 <p>고전 최적화기(Classical optimizer)</p>
 </li>
 </ul>
-<p>이 모든 요소는 IBM Quantum 프리미티브, 특히 Estimator를 기반으로 VQE 계산을 구축하기 위해 함께 사용됩니다. primitives에 대한 정보는 <a class="" href="/guides/primitives">문서</a>를 참조해 주세요. VQE 계산을 설정할 때, 다음과 같은 표준 Qiskit patterns 프레임워크를 따릅니다:</p>
+<p>이 모든 요소는 IBM Quantum 프리미티브, 주로 Estimator를 기반으로 VQE 계산을 구축하기 위해 함께 사용됩니다. 프리미티브에 대한 정보는 <a class="" href="/guides/primitives">문서</a>를 참조해 주세요. VQE 계산을 설정할 때, 다음과 같은 표준 Qiskit patterns 프레임워크를 따릅니다:</p>
 <ul>
 <li class="">
 <p>고전적 입력을 양자 문제로 매핑</p>
@@ -51,7 +51,7 @@
 </li>
 </ul>
 <p>이 프레임워크에 대한 일부 설명은 본 코스 전반에 걸쳐 찾을 수 있지만, Qiskit patterns의 예제와 함께 완전한 설명을 보려면 <a class="" href="/guides/intro-to-patterns">이 문서</a>를 참조해 주세요.</p>
-<p>이 코스를 완료하는 데 약 6-10시간을 할애할 것을 권장합니다. 영상과 읽기 자료는 두 시간 정도 소요될 가능성이 있습니다. 나머지 시간은 코드 셀을 실행하고 수정하며, 퀴즈 문제를 풀고, 연결된 문서를 읽는 데 사용됩니다.</p>
+<p>이 코스를 완료하는 데 약 6-10시간을 할애할 것을 권장합니다. 영상과 읽기 자료는 두 시간 정도 걸릴 거예요. 나머지 시간은 코드 셀을 실행하고 수정하며, 퀴즈 문제를 풀고, 연결된 문서를 읽는 데 사용됩니다.</p>
 <p>IBM Quantum®은 VQE와 관련된 다른 역량 강화 자료도 제공합니다. 이미 VQE의 구성 요소에 익숙하고 단순히 실습에 적용하고자 한다면, 다음 튜토리얼을 참조해 주세요: <a class="" href="/tutorials/spin-chain-vqe">VQE를 이용한 Heisenberg 사슬의 바닥 상태 에너지 추정</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview-of-vqe">VQE 개요<a href="#overview-of-vqe" class="hash-link" aria-label="VQE 개요로 직접 링크" title="VQE 개요로 직접 링크" translate="no">​</a></h2>
 <p>IBM Quantum Americas의 Quantum Innovation Centers 책임자인 Dr. Victoria Lipinska가 진행하는 이 개요 영상을 시청하며 VQE에 대한 학습을 시작하겠습니다.</p>

@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.fa60f6b1.js" defer="defer"></script>
-<script src="/assets/js/main.0ba31274.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e87f3bdc.js" defer="defer"></script>
+<script src="/assets/js/main.ffad712b.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/execution-modes-faq" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/execution-modes-faq" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -43,10 +43,10 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="batch">배치<a href="#batch" class="hash-link" aria-label="배치로 직접 링크" title="배치로 직접 링크" translate="no">​</a></h2>
 <div class="dq-accordion"><details class="dq-accordion-item" style="margin:0.5rem 0;padding:0.5rem 1rem;border:1px solid var(--ifm-color-emphasis-300);border-radius:4px"><summary style="cursor:pointer;font-weight:600">배치 모드에서 병렬로 실행되는 작업 수는 몇 개인가요?</summary><div style="margin-top:0.5rem"><p>병렬로 실행되는 작업 수는 Backend에 설정된 병렬성 수준에 따라 결정되며, 대부분의 Backend에서는 5개입니다. 그러나 배치가 활성화될 때 이미 실행 중인 다른 작업이 있을 수 있으므로, 활성 배치의 동시 작업 수는 더 낮을 수 있습니다.</p></div></details><details class="dq-accordion-item" style="margin:0.5rem 0;padding:0.5rem 1rem;border:1px solid var(--ifm-color-emphasis-300);border-radius:4px"><summary style="cursor:pointer;font-weight:600">작업 모드에서 _N_개의 PUB을 실행하는 것과 배치 모드에서 단일 PUB 작업 _N_개를 실행하는 것은 어떻게 다른가요?</summary><div style="margin-top:0.5rem"><p>주요 차이점은 시간과 비용의 트레이드오프입니다:</p><p>배치 모드:</p><ul>
 <li class="">
-<p>클래식 처리가 병렬로 실행될 수 있으므로 총 실행 시간이 줄어듭니다.</p>
+<p>고전 처리가 병렬로 실행될 수 있으므로 총 실행 시간이 줄어들어요.</p>
 </li>
 <li class="">
-<p>각 작업을 실행하는 데 약간의 오버헤드가 있으므로 배치 작업에 대해 조금 더 비용을 지불하게 됩니다. 단, 이는 모든 Circuit을 단일 작업으로 실행하는 것과 비교할 때입니다.</p>
+<p>작업마다 약간의 실행 오버헤드가 있으므로, 모든 Circuit을 단일 작업으로 실행할 때보다 배치 작업 비용이 조금 더 들어요.</p>
 </li>
 <li class="">
 <p>배치 모드는 Backend에 대한 독점적 접근을 제공하지 않으므로, 배치 내의 작업이 다른 사용자의 작업이나 보정(calibration) 작업과 함께 실행될 수 있습니다.</p>
