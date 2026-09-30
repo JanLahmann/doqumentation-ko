@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.4f34e635.js" defer="defer"></script>
-<script src="/assets/js/main.4aa00e51.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.cd036cec.js" defer="defer"></script>
+<script src="/assets/js/main.47c35921.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/local-testing-mode" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -51,13 +51,13 @@
 <p><code>&quot;stabilizer&quot;</code>: 노이즈 모델의 모든 오류가 Clifford 오류인 경우 노이즈가 있는 Clifford Circuit을 시뮬레이션할 수 있는 효율적인 Clifford 안정자 상태 시뮬레이터입니다.</p>
 </li>
 <li class="">
-<p><code>&quot;extended_stabilizer&quot;</code>: 상태를 rank-stabilizer 상태(안정자 상태들의 중첩)로 분해하는 방식에 기반한 Clifford + T Circuit의 근사 시뮬레이터입니다. 항의 수는 비-Clifford(T) Gate의 수에 따라 증가합니다.</p>
+<p><code>&quot;extended_stabilizer&quot;</code>: 상태를 ranked-stabilizer 상태로 분해하는 방식에 기반한 Clifford + T Circuit의 근사 시뮬레이터입니다. 항의 수는 비-Clifford(T) Gate의 수에 따라 증가합니다.</p>
 </li>
 <li class="">
 <p><code>&quot;matrix_product_state&quot;</code>: 상태에 대해 행렬 곱 상태(MPS) 표현을 사용하는 텐서 네트워크 상태 벡터 시뮬레이터입니다. 시뮬레이터 옵션에 따라 MPS 결합 차원을 자르거나 자르지 않고 수행할 수 있습니다. 기본 동작은 잘라내지 않는 것입니다.</p>
 </li>
 <li class="">
-<p><code>&quot;unitary&quot;</code>: 이상적인 Circuit의 밀집 유니터리 행렬 시뮬레이션이에요. 초기 양자 상태의 진화가 아닌 Circuit 자체의 유니터리 행렬을 시뮬레이션해요. 이 방법은 Gate만 시뮬레이션할 수 있으며, 측정, 리셋 또는 노이즈를 지원하지 않아요.</p>
+<p><code>&quot;unitary&quot;</code>: 이상적인 Circuit의 밀집 유니터리 행렬 시뮬레이션입니다. 초기 양자 상태의 진화가 아닌 Circuit 자체의 유니터리 행렬을 시뮬레이션합니다. 이 방법은 Gate만 시뮬레이션할 수 있으며, 측정, 리셋 또는 노이즈를 지원하지 않습니다.</p>
 </li>
 <li class="">
 <p><code>&quot;superop&quot;</code>: 이상적이거나 노이즈가 있는 Circuit의 밀집 슈퍼연산자 행렬 시뮬레이션입니다. 초기 양자 상태의 진화가 아닌 Circuit 자체의 슈퍼연산자 행렬을 시뮬레이션합니다. 이 방법은 이상적이고 노이즈가 있는 Gate와 리셋을 시뮬레이션할 수 있지만, 측정을 지원하지 않습니다.</p>
