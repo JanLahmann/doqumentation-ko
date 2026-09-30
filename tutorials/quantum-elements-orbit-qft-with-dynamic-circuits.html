@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.a2947d04.js" defer="defer"></script>
-<script src="/assets/js/main.27e0f5f0.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4f34e635.js" defer="defer"></script>
+<script src="/assets/js/main.374d4609.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/quantum-elements-orbit-qft-with-dynamic-circuits" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -25,7 +25,7 @@
 <!-- -->
 <!-- -->
 <!-- -->
-<p><em>사용량 추정치:</em> Heron r3 프로세서에서 2분. (참고: 이는 추정치일 뿐입니다. 실제 실행 시간은 다를 수 있습니다.) 기본적으로 이 튜토리얼은 세 개의 Orbit Function 작업을 하나의 IBM Quantum Compute Service 배치 모드 워크로드에 제출하며, 작업당 300개의 PUB로 총 900개의 PUB와 921,600 샷을 사용합니다.</p>
+<p><em>사용량 추정치:</em> Heron r3 프로세서에서 2분. (참고: 이는 추정치일 뿐입니다. 실제 실행 시간은 다를 수 있습니다.) 기본적으로 이 튜토리얼은 세 개의 Orbit Function 작업을 하나의 IBM Quantum Compute Service batch mode 워크로드에 제출하며, 작업당 300개의 PUB로 총 900개의 PUB와 921,600 샷을 사용합니다.</p>
 <p><em>경고:</em> 동적 Circuit은 현재 실험적인 기능이며, Quantum Compute <a href="#references" class="">[3]</a>의 제한 사항으로 인해 작업 실패가 발생할 수 있습니다. 예를 들어, 오류 6073은 작업이 고전 제어 하드웨어의 메모리 한도를 초과했음을 나타냅니다 <a href="#references" class="">[4]</a>. 이 노트북은 하나의 배치 내에서 세 개의 Quantum Compute 작업으로 Circuit 크기를 분할하여 이러한 위험을 줄입니다 <a href="#references" class="">[5]</a>. 각 고정 크기 비교는 하나의 작업에 유지되며, 큰 크기와 작은 크기는 작업의 고전 제어 워크로드를 균형 있게 조정하기 위해 짝지어집니다.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">학습 목표<a href="#learning-outcomes" class="hash-link" aria-label="학습 목표로 직접 링크" title="학습 목표로 직접 링크" translate="no">​</a></h2>
 <ul>
@@ -45,7 +45,7 @@
 <p><code>mode=&quot;raw&quot;</code> 및 <code>transpilation_mode=&quot;validate&quot;</code>를 사용하여 Orbit의 간소화된 트랜스파일 API를 사용합니다.</p>
 </li>
 <li class="">
-<p>각 고정 크기의 세 가지 전략 비교를 하나의 작업에 유지하면서 배치 모드 API를 통해 여러 Orbit 워크로드를 제출합니다.</p>
+<p>각 고정 크기의 세 가지 전략 비교를 하나의 작업에 유지하면서 batch mode API를 통해 여러 Orbit 워크로드를 제출합니다.</p>
 </li>
 <li class="">
 <p>동적 디커플링(DD)과 측정 오류 완화(MEM)가 적용되었는지 확인하기 위해 Orbit 메타데이터를 검사합니다.</p>
