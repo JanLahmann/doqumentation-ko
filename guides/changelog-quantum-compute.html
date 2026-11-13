@@ -16,8 +16,8 @@
 <script src="/runtime-config.js"></script>
 <script src="/umami-before-send.js"></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org,de.doqumentation.org,es.doqumentation.org,uk.doqumentation.org,fr.doqumentation.org,it.doqumentation.org,pt.doqumentation.org,ja.doqumentation.org,tl.doqumentation.org,ar.doqumentation.org,he.doqumentation.org,ms.doqumentation.org,id.doqumentation.org,th.doqumentation.org,ko.doqumentation.org,pl.doqumentation.org,ro.doqumentation.org,cs.doqumentation.org" data-before-send="fwqUmamiBeforeSend"></script><link rel="stylesheet" href="/assets/css/styles.082ca4e0.css">
-<script src="/assets/js/runtime~main.4256c057.js" defer="defer"></script>
-<script src="/assets/js/main.d8347ec6.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.df5dd0cd.js" defer="defer"></script>
+<script src="/assets/js/main.4d3fdec5.js" defer="defer"></script>
 <meta data-dq-mirror-noindex name="robots" content="noindex, follow" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -45,13 +45,13 @@
 <ul>
 <li class="">
 <p><strong><a class="" href="/guides/directed-execution-model">directed execution model</a>은 오류 완화 워크플로를 검사하고 사용자 지정하기 위한 새로운 도구를 제공해요</strong> — 올해 초에 공개된 directed execution model 프레임워크를 기반으로 새로운 도구가 만들어졌어요.</p>
-<p>Together with <a class="" href="/addons/samplomatic">Samplomatic</a>, they make up the <a class="" href="/guides/directed-execution-model">directed execution model</a>, which provides full transparency and control to fine-tune your error mitigation workflow. The <a class="" href="/addons/qiskit-addon-slc/guides/quickstart">Probabilistic error cancellation with shaded lightcones</a> tutorial, for example, demonstrates how this model is used to combine advanced techniques, including shaded lightcones, probabilistic error cancellation (PEC), Twirled Readout Error eXtinction (TREX), and <a class="" href="/addons/qiskit-mitigation/guides/postselection-with-non-markovian-error-checks">measurement-based postselection</a>, to further improve the result quality.</p>
+<p>이 도구들은 <a class="" href="/addons/samplomatic">Samplomatic</a>과 함께 <a class="" href="/guides/directed-execution-model">directed execution model</a>을 이뤄요. 이 모델은 오류 완화 워크플로를 세밀하게 조정할 수 있도록 완전한 투명성과 제어권을 제공해요. 예를 들어 <a class="" href="/addons/qiskit-addon-slc/guides/quickstart">Probabilistic error cancellation with shaded lightcones</a> 튜토리얼은 이 모델을 사용해 shaded lightcones, 확률적 오류 상쇄(PEC), Twirled Readout Error eXtinction(TREX), <a class="" href="/addons/qiskit-mitigation/guides/postselection-with-non-markovian-error-checks">측정 기반 사후 선택</a> 같은 고급 기법을 결합하여 결과 품질을 더욱 높이는 방법을 보여줘요.</p>
 <ul>
 <li class="">
-<p><a class="" href="/addons/qiskit-noise-learning"><code>qiskit-noise-learning</code></a> is a toolkit for randomization-based quantum noise characterization. You can use it to construct a custom noise-learning experiment, validate it with local simulation, and analyze the raw results.</p>
+<p><a class="" href="/addons/qiskit-noise-learning"><code>qiskit-noise-learning</code></a>은 무작위화 기반 양자 노이즈 특성화를 위한 툴킷이에요. 이를 사용해 사용자 지정 노이즈 학습 실험을 구성하고, 로컬 시뮬레이션으로 검증하며, 원시 결과를 분석할 수 있어요.</p>
 </li>
 <li class="">
-<p><a class="" href="/addons/qiskit-mitigation"><code>qiskit-mitigation</code></a> is a package of quantum error mitigation methods for building mitigation pipelines with the new execution model. It includes implementations of well-known methods, including PEC, PEA, TREX, and gate-folding ZNE, as well as post-selection for filtering out non-Markovian errors.</p>
+<p><a class="" href="/addons/qiskit-mitigation"><code>qiskit-mitigation</code></a>은 새로운 실행 모델로 오류 완화 파이프라인을 구축하기 위한 양자 오류 완화 기법 패키지예요. PEC, PEA, TREX, Gate 폴딩 ZNE를 포함한 잘 알려진 기법의 구현과, 비마르코프 오류를 걸러내기 위한 사후 선택(post-selection)이 포함돼 있어요.</p>
 </li>
 <li class="">
 <p><a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/release-notes#0500-2026-09-24" target="_blank" rel="noopener noreferrer" class=""><code>qiskit-ibm-runtime</code> v0.50.0</a>에서 이 프레임워크를 기반으로 만든 Sampler와 Estimator 프리미티브의 <strong>새로운 클라이언트 측 구현</strong>이 공개되었어요. 이 구현을 사용하면 각 오류 완화 기법이 정확히 어떻게 구현되어 있는지 확인하고, 실제 QPU에서 실행하기 전에 <a class="" href="/guides/local-testing-mode">로컬</a>에서 테스트할 수 있어요.</p>

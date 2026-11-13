@@ -16,8 +16,8 @@
 <script src="/runtime-config.js"></script>
 <script src="/umami-before-send.js"></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org,de.doqumentation.org,es.doqumentation.org,uk.doqumentation.org,fr.doqumentation.org,it.doqumentation.org,pt.doqumentation.org,ja.doqumentation.org,tl.doqumentation.org,ar.doqumentation.org,he.doqumentation.org,ms.doqumentation.org,id.doqumentation.org,th.doqumentation.org,ko.doqumentation.org,pl.doqumentation.org,ro.doqumentation.org,cs.doqumentation.org" data-before-send="fwqUmamiBeforeSend"></script><link rel="stylesheet" href="/assets/css/styles.082ca4e0.css">
-<script src="/assets/js/runtime~main.4256c057.js" defer="defer"></script>
-<script src="/assets/js/main.d8347ec6.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.df5dd0cd.js" defer="defer"></script>
+<script src="/assets/js/main.4d3fdec5.js" defer="defer"></script>
 <meta data-dq-mirror-noindex name="robots" content="noindex, follow" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -55,7 +55,7 @@
 <p><img decoding="async" loading="lazy" alt="박스와 트월링 어노테이션 사용 예시" src="/assets/images/execution-model-3f6abccbb019cdb57baf809a7c1ce82a.avif" width="1024" height="338" class="img_ev3q"></p>
 <p>어노테이션된 박스가 있는 Circuit은 <em>템플릿 Circuit</em>과 <em>samplex</em>를 생성하는 데 사용할 수 있어요. 출력 템플릿 Circuit은 추가 변경 없이(다른 매개변수 값이 할당되는 것 외에는) 실행될 매개변수화된 Circuit이에요. Samplomatic 라이브러리의 핵심 타입인 samplex는 템플릿 Circuit의 매개변수 및 기타 배열 값 필드에 대한 매개변수적 확률 분포를 나타내요. 이러한 필드는 바인딩된 템플릿 Circuit을 실행하여 수집된 데이터를 후처리하는 데 사용할 수 있어요. 즉, 템플릿 Circuit과 samplex는 함께 <a href="#executor" class="">Executor 프리미티브</a>에게 생성할 매개변수와 실행할 바인딩된 Circuit을 알려줘요. 이 두 구조는 클라이언트 측에서 생성되므로, 하드웨어 실행을 위해 전송하기 전에 로컬에서 검사하고 샘플링하여 출력을 검증할 수 있어요.</p>
 <p>어노테이션된 박스 생성 과정을 단순화하기 위해, Samplomatic 라이브러리는 사용자가 제공하는 전략에 따라 자동으로 Circuit 명령어를 어노테이션된 박스로 그룹화하는 Transpiler 패스도 제공합니다.</p>
-<p>To learn more about Samplomatic, visit the <a class="" href="/addons/samplomatic">guides</a> and <a class="" href="/addons/samplomatic">API reference</a> documentation. Feel free to submit feedback and report bugs in its <a href="https://github.com/Qiskit/samplomatic" target="_blank" rel="noopener noreferrer" class="">GitHub</a> repository.</p>
+<p>Samplomatic에 대해 더 알아보려면 <a class="" href="/addons/samplomatic">가이드</a> 및 <a class="" href="/addons/samplomatic">API 참조</a> 문서를 방문하세요. <a href="https://github.com/Qiskit/samplomatic" target="_blank" rel="noopener noreferrer" class="">GitHub</a> 저장소에서 피드백을 제출하고 버그를 신고해 주세요.</p>
 <span class="anchorTargetStickyNavbar_Vzrq" id="executor"></span>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="executor-primitive">Executor 프리미티브<a href="#executor-primitive" class="hash-link" aria-label="Executor 프리미티브로 직접 링크" title="Executor 프리미티브로 직접 링크" translate="no">​</a></h3>
 <p>Executor는 (템플릿 Circuit, samplex) 쌍을 입력으로 받아, samplex에 따라 매개변수 값을 생성하고 바인딩하며, 바인딩된 Circuit을 하드웨어에서 실행하고, 실행 결과와 메타데이터를 반환하는 새로운 IBM Quantum 프리미티브입니다. 입력 쌍의 지시를 따르며 암묵적인 결정을 내리지 않으므로 프로세스가 투명하면서도 성능이 뛰어납니다.</p>
