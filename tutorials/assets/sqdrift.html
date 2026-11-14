@@ -16,8 +16,8 @@
 <script src="/runtime-config.js"></script>
 <script src="/umami-before-send.js"></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org,de.doqumentation.org,es.doqumentation.org,uk.doqumentation.org,fr.doqumentation.org,it.doqumentation.org,pt.doqumentation.org,ja.doqumentation.org,tl.doqumentation.org,ar.doqumentation.org,he.doqumentation.org,ms.doqumentation.org,id.doqumentation.org,th.doqumentation.org,ko.doqumentation.org,pl.doqumentation.org,ro.doqumentation.org,cs.doqumentation.org" data-before-send="fwqUmamiBeforeSend"></script><link rel="stylesheet" href="/assets/css/styles.082ca4e0.css">
-<script src="/assets/js/runtime~main.df5dd0cd.js" defer="defer"></script>
-<script src="/assets/js/main.4d3fdec5.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4b470ac5.js" defer="defer"></script>
+<script src="/assets/js/main.da7480d7.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -180,7 +180,7 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="hardware-example">하드웨어 예제<a href="#hardware-example" class="hash-link" aria-label="하드웨어 예제로 직접 링크" title="하드웨어 예제로 직접 링크" translate="no">​</a></h2>
 <p>이 예제는 20개의 큐비트(10개의 공간 오비탈)를 사용합니다. 이는 빠르게 실행되어야 하는 튜토리얼의 편의를 위한 선택이며, 이 방법의 한계가 아닙니다.</p>
 <p>고전 단계의 비용은 큐비트 수로 직접 정해지지 않습니다. SQD는 <em>샘플링된</em> 구성들이 펼치는 부분공간에 사영된 해밀토니안을 대각화하므로, 고전 비용을 좌우하는 것은 선택된 부분공간의 차원입니다. 이 차원은 여기서 <code>samples_per_batch</code>, <code>num_batches</code>, 그리고 회로가 실제로 만들어 내는 서로 다른 구성의 수에 의해 결정되며, 사영된 해밀토니안을 적용하는 데 필요한 희소 선형대수 연산도 비용에 영향을 줍니다. 전체 CI 공간은 오비탈과 전자 수에 따라 조합적으로 커지지만, 선택된 부분공간은 그중 작고 조절 가능한 일부이며 그 크기를 직접 제어할 수 있습니다. 따라서 큐비트 수와 고전적 난이도는 어느 정도 독립적으로 달라질 수 있습니다. 작은 부분공간으로 샘플링한 더 넓은 오비탈 공간이, 매우 큰 공간에서 대각화한 더 작은 시스템보다 저렴할 수 있습니다.</p>
-<p>따라서 실제로 가능한 시스템 크기는 원하는 정확도를 위해 필요한 부분공간 차원과 고유값 풀이기가 사용할 수 있는 메모리 및 코어 수에 달려 있습니다. 더 큰 오비탈 공간은 보통 화학적 정확도에 도달하기 위해 더 큰 부분공간이 필요하며, 이것이 결국 분산 자원을 사용하게 되는 이유입니다. 이 단계를 확장하는 방법은 <a href="https://qiskit.github.io/qiskit-addon-sqd-hpc/" target="_blank" rel="noopener noreferrer" class="">qiskit-addon-sqd-hpc</a>를 참고하세요. 고정된 한계를 가정하기보다는, 보고되는 부분공간 차원과 반복에 따른 에너지 수렴을 지켜보면서 에너지가 더 이상 개선되지 않거나 사용 가능한 메모리가 소진될 때까지 부분공간 크기를 늘리는 것이 실용적인 접근입니다.</p>
+<p>따라서 실제로 가능한 시스템 크기는 원하는 정확도를 위해 필요한 부분공간 차원과 고유값 풀이기가 사용할 수 있는 메모리 및 코어 수에 달려 있습니다. 더 큰 오비탈 공간은 보통 화학적 정확도에 도달하기 위해 더 큰 부분공간이 필요하며, 이것이 결국 분산 자원을 사용하게 되는 이유입니다. 이 단계를 확장하는 방법은 <a href="https://github.com/Qiskit/qiskit-sqd-hpc" target="_blank" rel="noopener noreferrer" class="">qiskit-addon-sqd-hpc</a>를 참고하세요. 고정된 한계를 가정하기보다는, 보고되는 부분공간 차원과 반복에 따른 에너지 수렴을 지켜보면서 에너지가 더 이상 개선되지 않거나 사용 가능한 메모리가 소진될 때까지 부분공간 크기를 늘리는 것이 실용적인 접근입니다.</p>
 <p><em>참고:</em> 하드웨어 잡음으로 인한 샘플링 오차 때문에, 하드웨어 실행에서 대각화를 위해 만들어지는 부분공간은 시뮬레이터를 사용할 때보다 커집니다. 대각화하려는 부분공간의 차원이 커지긴 하지만, SQD가 잡음에 강하기 때문에 이 워크플로는 여전히 정확한 답을 줍니다.</p>
 <p><strong>불필요한 문자열 가지치기</strong></p>
 <p>여기서는 추가 단계를 수행하도록 선택할 수 있습니다. 회로 실행에서 얻은 모든 비트열이 있을 때, SQD를 실행하기 전에 유효하지 않은 비트열을 걸러내거나 가지치기 없이 그대로 진행할 수 있습니다. 하드웨어 실행에서는 일반적으로 가지치기를 건너뛰는 편이 낫습니다. 대칭성이 깨진 샷을 구성 복구에 그대로 남겨 두면 이를 유효한 구성으로 복구하여 해당 샷을 완전히 버리는 대신 부분공간을 넓힐 수 있기 때문입니다.</p>
